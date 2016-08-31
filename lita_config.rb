@@ -29,6 +29,9 @@ Lita.configure do |config|
   config.redis.url = ENV["REDIS_URL"]
   # config.redis.port = 1234
 
+  #heroku http port
+  config.http.port = ENV["PORT"]
+
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
   config.handlers.keepalive.url = "http://erlich.herokuapp.com"
