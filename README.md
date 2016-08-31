@@ -2,12 +2,14 @@
 
 ## Development
 - Requires
-  - ruby >= 2.2.2
-  - redis instance
+  - [ruby >= 2.2.2](https://rvm.io/)
+  - [bundler](http://bundler.io/) `gem install bundler`
+  - [redis](http://redis.io/topics/quickstart)
 
 - Steps
   - Clone the repo
   - Ensure redis is listening on `localhost:6379`
+  - `bundle install`
   - `bundle exec lita` - starts the bot
 
 ### Environment variables (optional)
