@@ -18,19 +18,19 @@ Lita.configure do |config|
   # The adapter you want to connect with. Make sure you've added the
   # appropriate gem to the Gemfile.
 
-  config.robot.adapter = :slack
-  config.adapters.slack.token = ENV["LITA_SLACK_TOKEN"]
+  config.robot.adapter = (ENV["LITA_ADAPTER"] or :shell)
+  config.adapters.slack.token = (ENV["LITA_SLACK_TOKEN"] or "nuttin")
 
   ## Example: Set options for the chosen adapter.
   # config.adapter.username = "myname"
   # config.adapter.password = "secret"
 
   ## Example: Set options for the Redis connection.
-  config.redis.url = ENV["REDIS_URL"]
+  config.redis.url = (ENV["REDIS_URL"] or "redis://localhost:6379")
   # config.redis.port = 1234
 
   #heroku http port
-  config.http.port = ENV["PORT"]
+  config.http.port = (ENV["PORT"] or 8080)
 
   ## Example: Set configuration for any loaded handlers. See the handler's
   ## documentation for options.
