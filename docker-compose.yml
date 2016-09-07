@@ -1,0 +1,21 @@
+version: "2"
+services:
+  lita:
+    build: .
+    depends_on:
+      - "redis"
+    links:
+      - "redis"
+    ports:
+      - "8002:8080"
+    env_file:
+      - ".env"
+    environment:
+      REDIS_URL: "redis://redis:6379"
+      LITA_ADAPTER: "slack"
+    restart: always
+  redis:
+    image: "redis"
+    volumes:
+      - /opt/data/redis/lita:/data
+    restart: always
