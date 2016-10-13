@@ -1,7 +1,7 @@
 version: "2"
 services:
   lita:
-    image: wpgtech/lita:latest
+    image: wpgtech/erlich:latest
     depends_on:
       - "redis"
     links:
