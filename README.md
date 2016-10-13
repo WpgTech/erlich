@@ -1,4 +1,5 @@
 # Erlich
+[![Build Status](https://travis-ci.org/WpgTech/erlich.svg?branch=master)](https://travis-ci.org/WpgTech/erlich)
 
 ## Development
 - Requires
